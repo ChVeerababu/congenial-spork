@@ -5,7 +5,7 @@
 
 This document demonstrates how to create complex pipelines using object detection and object recognition models from OpenVINO Model Zoo. As an example, we will use [face-detection-retail-0004](https://github.com/openvinotoolkit/open_model_zoo/blob/2022.1.0/models/intel/face-detection-retail-0004/README.md) to detect multiple faces on the image. Then, for each detected face we will crop it using [model_zoo_intel_object_detection](https://github.com/openvinotoolkit/model_server/tree/releases/2022/1/src/custom_nodes/model_zoo_intel_object_detection) example custom node. Finally, each image face image will be forwarded to [age-gender-recognition-retail-0013](https://github.com/openvinotoolkit/open_model_zoo/blob/2022.1.0/models/intel/age-gender-recognition-retail-0013/README.md) and [emotion-recognition-retail-0003](https://github.com/openvinotoolkit/open_model_zoo/blob/2022.1.0/models/intel/emotions-recognition-retail-0003/README.md) models.
 
-![Multi Faces Analysis Graph](multi_faces_analysis.png)
+
 
 Using such a pipeline, a single request to OVMS can perform a complex set of operations to determine all faces and their properties.
 
@@ -17,7 +17,7 @@ For simpler use case with single face analysis see [single_face_analysis_pipelin
 
 Below is depicted graph implementing faces analysis pipeline execution. 
 
-![Multi Faces Analysis Pipeline Graph](multi_faces_analysis_graph.svg)
+
 
 It includes the following Nodes:
 - Model `face-detection` - deep learning model which takes user image as input. Its outputs contain information about face coordinates and confidence levels.
@@ -126,9 +126,8 @@ if the image was analyzed correctly.
 
 
 ## Usage
-
-
-'''import cv2
+```
+import cv2
 import time
 import requests,json
 
@@ -158,4 +157,7 @@ while(True):
         break
 
 vid.release()
-cv2.destroyAllWindows()'''
+cv2.destroyAllWindows()
+```
+
+
