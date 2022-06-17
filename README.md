@@ -128,7 +128,7 @@ if the image was analyzed correctly.
 ## Usage
 
 
-import cv2
+'''import cv2
 import time
 import requests,json
 
@@ -158,4 +158,4 @@ while(True):
         break
 
 vid.release()
-cv2.destroyAllWindows()
+cv2.destroyAllWindows()'''
