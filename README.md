@@ -77,7 +77,7 @@ workspace
 Deploy OVMS with faces analysis pipeline using the following command:
 
 ```bash
-docker run -p 9093:9000 -d -v ${PWD}/workspace:/workspace openvino/model_server --config_path /workspace/config.json --port 9000
+docker run -p 9000:9000 -d -v ${PWD}/workspace:/workspace openvino/model_server --config_path /workspace/config.json --port 9000
 ```
 
 ## Requesting the Service
